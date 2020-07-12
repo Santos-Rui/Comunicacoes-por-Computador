@@ -1,0 +1,29 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	 dns.cc.pt   grupo4.cc.pt (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	dns.cc.pt.
+@	IN	NS	dns2.cc.pt.
+@ 	IN	MX	29 mail.cc.pt.
+@ 	IN	MX	30 mail2.cc.pt.
+
+dns 	IN	A	10.3.3.1
+dns2	IN	A	10.4.4.1
+www		IN	A	10.3.3.3
+mail	IN	A	10.3.3.3
+mail2	IN	A	10.3.3.2
+pop		IN	A	10.3.3.2
+imap	IN	A	10.3.3.2
+Hermes	IN	A	10.4.4.1
+Atenas	IN	A	10.4.4.3
+Zeus	IN	A	10.4.4.2
+Portatil1 IN	A	10.1.1.1
+Grupo04	IN	CNAME	Portatil1
+
